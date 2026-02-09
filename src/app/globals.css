@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  /* The Pets Garden Color Palette */
+  --warm-ivory: #fefcf8;
+  --warm-white: #ffffff;
+  --matte-gold: #d4af37;
+  --soft-beige: #f5f2ea;
+  --warm-dark: #2d2926;
+  --warm-gray: #6b6660;
+  --accent-gold: #b8941f;
+  --light-gold: #f4e5b7;
+}
+
+@theme {
+  --color-warm-ivory: #fefcf8;
+  --color-warm-white: #ffffff;
+  --color-matte-gold: #d4af37;
+  --color-soft-beige: #f5f2ea;
+  --color-warm-dark: #2d2926;
+  --color-warm-gray: #6b6660;
+  --color-accent-gold: #b8941f;
+  --color-light-gold: #f4e5b7;
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}
+
+body {
+  background: var(--warm-ivory);
+  color: var(--warm-dark);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  @apply scroll-smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Custom utility classes */
+.btn-primary {
+  @apply bg-matte-gold hover:bg-accent-gold text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply border-2 border-matte-gold text-matte-gold hover:bg-matte-gold hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+}
+
+.section-padding {
+  @apply py-16 px-4 sm:px-6 lg:px-8;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto;
+}
