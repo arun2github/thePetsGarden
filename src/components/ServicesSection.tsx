@@ -17,6 +17,32 @@ const ServicesSection = () => {
     }
   };
 
+  // Helper function to get image positioning for each service
+  const getImagePosition = (serviceId: number) => {
+    switch (serviceId) {
+      case 1: // Hostel Facility
+        return 'object-center';
+      case 2: // Supplement + Medicine
+        return 'object-center';
+      case 3: // Hair Grooming + Cleaning
+        return 'object-center';
+      case 4: // Care Taker
+        return 'object-center';
+      case 5: // Fish
+        return 'object-center';
+      case 6: // Dog
+        return 'object-top';
+      case 7: // Cat
+        return 'object-center';
+      case 8: // Training for Dog
+        return 'object-center';
+      case 9: // Bird Care
+        return 'object-center';
+      default:
+        return 'object-center';
+    }
+  };
+
   const services = [
     {
       id: 1,
@@ -73,6 +99,13 @@ const ServicesSection = () => {
       description: "Comprehensive training programs that build trust, confidence, and create well-behaved, happy dog companions.",
       image: "/images/dog_tarining.png",
       features: ["Obedience Training", "Behavioral Therapy", "Socialization", "Advanced Commands"]
+    },
+    {
+      id: 9,
+      title: "Bird Care",
+      description: "Expert avian care services including proper nutrition, cage maintenance, health monitoring and social enrichment for all bird species.",
+      image: "/images/service_bird.png",
+      features: ["Cage Cleaning", "Nutrition Planning", "Health Monitoring", "Flight Exercise"]
     }
   ];
 
@@ -136,7 +169,7 @@ const ServicesSection = () => {
                       alt={service.title}
                       width={400}
                       height={200}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${getImagePosition(service.id)}`}
                     />
                   </motion.div>
                 </div>

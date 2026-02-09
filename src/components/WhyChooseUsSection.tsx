@@ -461,21 +461,21 @@ const WhyChooseUsSection = () => {
               Our <span className="bg-gradient-to-r from-amber-600 to-amber-500 bg-clip-text text-transparent">Premium Track Record</span>
             </motion.h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
                 <motion.div 
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={hasAnimated ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                  transition={{ duration: 0.6, delay: 1.9 + index * 0.1 }}
-                  className="text-center group"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={hasAnimated ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.8, delay: 1.9 + index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-stone-800/90 backdrop-blur-xl rounded-xl p-6 border border-amber-400/30 shadow-xl hover:bg-stone-800/95 hover:shadow-2xl transition-all duration-300 text-center group"
                 >
-                  <motion.div 
-                    className={`text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
-                  >
+                  <div className="text-3xl mb-3">{stat.icon}</div>
+                  <div className={`text-3xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                     {stat.number}
-                  </motion.div>
-                  <div className="text-stone-700 font-semibold text-lg transition-colors duration-300">
+                  </div>
+                  <div className="text-slate-300 font-semibold group-hover:text-white transition-colors duration-300">
                     {stat.label}
                   </div>
                 </motion.div>

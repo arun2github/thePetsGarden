@@ -18,6 +18,7 @@
     "react-dom": "19.2.3",
     "react-intersection-observer": "^10.0.2",
     "react-three-fiber": "^6.0.13",
+    "resend": "^6.9.1",
     "swiper": "^12.1.0",
     "three": "^0.182.0"
   },

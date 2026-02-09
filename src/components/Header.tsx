@@ -268,7 +268,7 @@ const Header = () => {
                   scale: [1, 1.2, 1],
                   borderColor: ['rgba(251,191,36,0)', 'rgba(251,191,36,0.5)', 'rgba(251,191,36,0)']
                 } : {}}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6, type: "tween" }}
               />
             </motion.button>
           </div>

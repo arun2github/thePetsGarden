@@ -114,7 +114,7 @@ const Header = () => {
                 <motion.div
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 blur-lg scale-150 opacity-0 group-hover:opacity-100"
                   animate={{ scale: [1.5, 1.8, 1.5], opacity: [0.2, 0.4, 0.2] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  transition={{ duration: 2, repeat: Infinity, type: "tween" }}
                 />
               </motion.div>
               
@@ -142,12 +142,12 @@ const Header = () => {
                 >
                   <motion.span
                     animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0, type: "tween" }}
                   >✨</motion.span>
                   <span>PREMIUM PET PARADISE</span>
                   <motion.span
                     animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 1, type: "tween" }}
                   >✨</motion.span>
                 </motion.div>
               </div>

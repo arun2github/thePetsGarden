@@ -1,3 +1,4 @@
+import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import FeaturedPetsSection from "@/components/FeaturedPetsSection";
 import Footer from "@/components/Footer";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ServicesSection />
+      <AboutSection />
       <FeaturedPetsSection />
       <WhyChooseUsSection />
       <GallerySection />

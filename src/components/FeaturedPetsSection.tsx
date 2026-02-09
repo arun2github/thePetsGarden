@@ -229,13 +229,13 @@ const FeaturedPetsSection = () => {
                       scale: 1.15, 
                       rotate: [0, -15, 15, 0],
                       boxShadow: "0 20px 40px rgba(245, 158, 11, 0.4)",
-                      transition: { duration: 0.6, type: "spring", stiffness: 300 }
+                      transition: { duration: 0.6, type: "tween" }
                     }}
                     animate={{
                       y: [0, -3, 0],
                     }}
                     transition={{
-                      y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                      y: { duration: 2, repeat: Infinity, ease: "easeInOut", type: "tween" }
                     }}
                   >
                     <motion.span 
@@ -255,7 +255,7 @@ const FeaturedPetsSection = () => {
                         borderColor: ["rgba(245, 158, 11, 0)", "rgba(245, 158, 11, 0.6)", "rgba(245, 158, 11, 0)"],
                         scale: [1, 1.1, 1],
                       }}
-                      transition={{ duration: 2, repeat: Infinity }}
+                      transition={{ duration: 2, repeat: Infinity, type: "tween" }}
                     />
                   </motion.div>
                   
@@ -266,7 +266,7 @@ const FeaturedPetsSection = () => {
                     animate={{
                       boxShadow: ["0 10px 20px rgba(245, 158, 11, 0.3)", "0 15px 30px rgba(245, 158, 11, 0.4)", "0 10px 20px rgba(245, 158, 11, 0.3)"],
                     }}
-                    transition={{ duration: 3, repeat: Infinity }}
+                    transition={{ duration: 3, repeat: Infinity, type: "tween" }}
                   >
                     ✨ Premium
                   </motion.div>
@@ -391,7 +391,7 @@ const FeaturedPetsSection = () => {
                         x: ["-100%", "200%"],
                         opacity: [0, 1, 0],
                       }}
-                      transition={{ duration: 0.8 }}
+                      transition={{ duration: 0.8, type: "tween" }}
                     />
                     
                     <span className="relative z-10 flex items-center justify-center gap-3 text-lg">
