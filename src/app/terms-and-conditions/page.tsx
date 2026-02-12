@@ -146,14 +146,14 @@ export default function TermsAndConditions() {
                   <h3 className="font-semibold text-lg mb-2">Health Guarantee</h3>
                   <ul className="list-disc list-inside space-y-1 ml-4">
                     <li>All pets come with health certificates from licensed veterinarians</li>
-                    <li>7-day health guarantee from date of purchase</li>
+                    <li>2-day health guarantee from date of purchase</li>
                     <li>Vaccination records and medical history provided</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Return Policy</h3>
                   <ul className="list-disc list-inside space-y-1 ml-4">
-                    <li>Returns accepted within 7 days for health-related issues only</li>
+                    <li>Returns accepted within 2 days for health-related issues only</li>
                     <li>Full refund provided with veterinary documentation</li>
                     <li>No returns accepted for behavioral or preference reasons after 48 hours</li>
                   </ul>

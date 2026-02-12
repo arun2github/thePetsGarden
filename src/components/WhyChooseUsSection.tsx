@@ -60,11 +60,11 @@ const WhyChooseUsSection = () => {
   const reviews = [
     {
       id: 1,
-      name: "Priya Sharma",
-      location: "Mumbai",
-      petType: "Golden Retriever - Bruno",
+      name: "Dr. kalyani Singh",
+      location: "Saharsa",
+      petType: "Labrador - Laddu",
       rating: 5,
-      review: "Bruno has been the perfect addition to our family! The Pets Garden's professional care and attention to detail exceeded all expectations. Bruno arrived healthy, well-socialized, and absolutely gorgeous. The team's expertise in matching pets to families is remarkable.",
+      review: "Laddu has been the perfect addition to our family! The Pets Garden's professional care and attention to detail exceeded all expectations. Bruno arrived healthy, well-socialized, and absolutely gorgeous. The team's expertise in matching pets to families is remarkable.",
       image: "👩‍💼",
       verified: true,
       petEmoji: "🐕"

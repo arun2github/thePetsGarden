@@ -74,24 +74,24 @@ const ServicesSection = () => {
     },
     {
       id: 5,
-      title: "Fish",
-      description: "Specialized care and services for aquatic pets including proper feeding, tank maintenance and health monitoring.",
+      title: "Fish Care & Sales",
+      description: "Premium aquatic pets for sale plus specialized care services including proper feeding, tank maintenance and health monitoring.",
       image: "/images/fish_Auwatic care.png",
-      features: ["Tank Maintenance", "Feeding Schedule", "Water Quality", "Health Check"]
+      features: ["Premium Fish Sales", "Tank Maintenance", "Feeding Schedule", "Health Check"]
     },
     {
       id: 6,
-      title: "Dog",
-      description: "Comprehensive care services specifically designed for dogs including grooming, training, and health maintenance.",
+      title: "Dog Care & Sales",
+      description: "Quality dog breeds for sale along with comprehensive care services including grooming, training, and health maintenance.",
       image: "/images/DogCare.png",
-      features: ["Dog Care", "Exercise Plans", "Grooming", "Health Support"]
+      features: ["Purebred Sales", "Dog Care", "Exercise Plans", "Health Support"]
     },
     {
       id: 7,
-      title: "Cat",
-      description: "Specialized feline care services tailored to meet the unique needs and preferences of your cat companions.",
+      title: "Cat Care & Sales", 
+      description: "Beautiful cat breeds available for purchase plus specialized feline care services tailored to meet your cat's unique needs.",
       image: "/images/catCare.png",
-      features: ["Cat Care", "Play Sessions", "Grooming", "Comfort Zones"]
+      features: ["Quality Breeds", "Cat Care", "Play Sessions", "Health Monitoring"]
     },
     {
       id: 8,
@@ -102,10 +102,10 @@ const ServicesSection = () => {
     },
     {
       id: 9,
-      title: "Bird Care",
-      description: "Expert avian care services including proper nutrition, cage maintenance, health monitoring and social enrichment for all bird species.",
+      title: "Bird Care & Sales",
+      description: "Exotic and domestic birds for sale plus expert avian care services including nutrition, cage maintenance, and health monitoring.",
       image: "/images/service_bird.png",
-      features: ["Cage Cleaning", "Nutrition Planning", "Health Monitoring", "Flight Exercise"]
+      features: ["Exotic Birds Sales", "Cage Cleaning", "Nutrition Planning", "Health Monitoring"]
     }
   ];
 

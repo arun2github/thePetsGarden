@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const AboutSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -14,22 +15,16 @@ const AboutSection = () => {
 
   const teamMembers = [
     {
-      name: "Sanju Tiwari",
+      name: "Mr. Sanju Tiwari",
       role: "Founder & Pet Specialist",
       description: "Expert in pet breeding, selection, and care with years of experience connecting families with their perfect companions.",
-      image: "🐕"
+      image: "/images/sanju.png"
     },
     {
-      name: "Breeding Specialists",
-      role: "Pet Selection Team",
-      description: "Certified professionals ensuring healthy breeding practices and proper pet socialization for the best family matches.",
-      image: "🏆"
-    },
-    {
-      name: "Care Specialists",
-      role: "Pet Care Team",
-      description: "Dedicated veterinarians and caregivers providing comprehensive health, grooming, and boarding services.",
-      image: "⚕️"
+      name: "Mr. Sajan Kumar",
+      role: "Co-Founder & Breeding Specialist",
+      description: "Certified professional ensuring healthy breeding practices and proper pet socialization for the best family matches.",
+      image: "/images/Sajan.png"
     }
   ];
 
@@ -171,7 +166,7 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -181,7 +176,15 @@ const AboutSection = () => {
               whileHover={{ y: -10 }}
               className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-500 text-center"
             >
-              <div className="text-6xl mb-6">{member.image}</div>
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-amber-400/50 shadow-xl">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 128px, 128px"
+                />
+              </div>
               <h4 className="text-2xl font-bold text-white mb-2">{member.name}</h4>
               <p className="text-amber-400 font-semibold mb-4">{member.role}</p>
               <p className="text-slate-300 leading-relaxed">{member.description}</p>

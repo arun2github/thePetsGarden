@@ -34,30 +34,30 @@ const GallerySection = () => {
     { type: 'image', src: '/images/gallery/bird.jpeg', alt: 'Colorful Bird' },
     { type: 'image', src: '/images/gallery/bird2.jpeg', alt: 'Bird Portrait' },
     { type: 'image', src: '/images/gallery/cat.jpeg', alt: 'Lovely Cat' },
-    { type: 'video', src: '/images/gallery/dog.mp4', poster: '/images/gallery/dog3.jpeg' },
-    { type: 'video', src: '/images/gallery/dog1.mp4', poster: '/images/gallery/dog4.jpeg' },
+    { type: 'video', src: '/images/gallery/dog.mp4', poster: '/images/gallery/dog10.jpeg' },
+    { type: 'video', src: '/images/gallery/dog1.mp4', poster: '/images/gallery/dog11.jpeg' },
     { type: 'image', src: '/images/gallery/dog10.jpeg', alt: 'Playful Dog' },
     { type: 'image', src: '/images/gallery/dog11.jpeg', alt: 'Happy Dog' },
     { type: 'image', src: '/images/gallery/dog12.jpeg', alt: 'Dog Portrait' },
     { type: 'image', src: '/images/gallery/dog13.jpeg', alt: 'Cute Dog' },
     { type: 'image', src: '/images/gallery/dog15.jpeg', alt: 'Dog Playing' },
     { type: 'image', src: '/images/gallery/dog16.jpeg', alt: 'Beautiful Dog' },
-    { type: 'video', src: '/images/gallery/dog17.mp4', poster: '/images/gallery/dog5.jpeg' },
-    { type: 'video', src: '/images/gallery/dog18.mp4', poster: '/images/gallery/dog6.jpeg' },
-    { type: 'video', src: '/images/gallery/dog2.mp4', poster: '/images/gallery/dog8.jpeg' },
-    { type: 'video', src: '/images/gallery/dog20.mp4', poster: '/images/gallery/dog9.jpeg' },
+    { type: 'video', src: '/images/gallery/dog17.mp4', poster: '/images/gallery/dog15.jpeg' },
+    { type: 'video', src: '/images/gallery/dog18.mp4', poster: '/images/gallery/dog16.jpeg' },
+    { type: 'video', src: '/images/gallery/dog2.mp4', poster: '/images/gallery/dog12.jpeg' },
+    { type: 'video', src: '/images/gallery/dog20.mp4', poster: '/images/gallery/dog13.jpeg' },
     { type: 'video', src: '/images/gallery/dog21.mp4', poster: '/images/gallery/dog22.jpeg' },
     { type: 'image', src: '/images/gallery/dog22.jpeg', alt: 'Adorable Dog' },
-    { type: 'video', src: '/images/gallery/dog22.mp4', poster: '/images/gallery/dog3.jpeg' },
-    { type: 'video', src: '/images/gallery/dog23.mp4', poster: '/images/gallery/dog4.jpeg' },
-    { type: 'video', src: '/images/gallery/dog24.mp4', poster: '/images/gallery/dog5.jpeg' },
-    { type: 'video', src: '/images/gallery/dog25.mp4', poster: '/images/gallery/dog6.jpeg' },
-    { type: 'video', src: '/images/gallery/dog26.mp4', poster: '/images/gallery/dog8.jpeg' },
+    { type: 'video', src: '/images/gallery/dog22.mp4', poster: '/images/gallery/Dog14.jpeg' },
+    { type: 'video', src: '/images/gallery/dog23.mp4', poster: '/images/gallery/dog3.jpeg' },
+    { type: 'video', src: '/images/gallery/dog24.mp4', poster: '/images/gallery/dog4.jpeg' },
+    { type: 'video', src: '/images/gallery/dog25.mp4', poster: '/images/gallery/dog5.jpeg' },
+    { type: 'video', src: '/images/gallery/dog26.mp4', poster: '/images/gallery/dog6.jpeg' },
     { type: 'image', src: '/images/gallery/dog3.jpeg', alt: 'Sweet Dog' },
     { type: 'image', src: '/images/gallery/dog4.jpeg', alt: 'Dog Friend' },
     { type: 'image', src: '/images/gallery/dog5.jpeg', alt: 'Happy Pup' },
     { type: 'image', src: '/images/gallery/dog6.jpeg', alt: 'Playful Pup' },
-    { type: 'video', src: '/images/gallery/dog7.mp4', poster: '/images/gallery/dog9.jpeg' },
+    { type: 'video', src: '/images/gallery/dog7.mp4', poster: '/images/gallery/dog8.jpeg' },
     { type: 'image', src: '/images/gallery/dog8.jpeg', alt: 'Cute Puppy' },
     { type: 'image', src: '/images/gallery/dog9.jpeg', alt: 'Dog Portrait' },
     { type: 'video', src: '/images/gallery/dog_vedio.mp4', poster: '/images/gallery/puppy1.jpeg' },
@@ -171,24 +171,21 @@ const GallerySection = () => {
                 onClick={() => setSelectedMedia(media)}
               >
                 <div className="relative aspect-video">
-                  <video
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    poster={media.poster}
-                    muted
-                    onMouseEnter={(e) => (e.target as HTMLVideoElement).play()}
-                    onMouseLeave={(e) => {
-                      const video = e.target as HTMLVideoElement;
-                      video.pause();
-                      video.currentTime = 0;
-                    }}
-                  >
-                    <source src={media.src} type="video/mp4" />
-                  </video>
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center">
-                      <span className="text-amber-600 text-2xl">▶</span>
+                  {/* Use Image for thumbnail instead of video poster */}
+                  <Image
+                    src={media.poster}
+                    alt="Video thumbnail"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  />
+                  {/* Play button overlay */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-amber-600 text-2xl ml-1">▶</span>
                     </div>
                   </div>
+                  {/* Video badge */}
                   <div className="absolute top-3 right-3 bg-amber-600 text-white px-3 py-1 rounded-full text-xs font-bold">
                     VIDEO
                   </div>
